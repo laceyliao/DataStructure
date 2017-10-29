@@ -14,13 +14,13 @@ void GetNum(Joseph rear,int m,int n);
 int main()
 {
 	int n;
-	printf("\t\tÇëÊäÈëÈËÊı¸öÊı£º");
+	printf("\t\tè¯·è¾“å…¥äººæ•°ä¸ªæ•°ï¼š");
 	scanf("%d",&n);
 	printf("\n");
 	Joseph Rear;
 	Rear = CreatJoseph(n);
 	int m;
-	printf("ÇëÊäÈë³õÊ¼ÃÜÂë£º");
+	printf("è¯·è¾“å…¥åˆå§‹å¯†ç ï¼š");
 	scanf("%d",&m);
 	printf("\n"); 
 	GetNum(Rear,m,n); 
@@ -34,17 +34,17 @@ Joseph CreatJoseph(int n)
 	rear=head;
 	for(i=1;i<=n;i++)
 	{
-		printf("ÇëÊäÈëµÚ%d¸öÈËµÄÃÜÂë£º",i);
+		printf("è¯·è¾“å…¥ç¬¬%dä¸ªäººçš„å¯†ç ï¼š",i);
 		scanf("%d",&m);
 		printf("\n");
 		temp=(Joseph)malloc(sizeof(struct Jose));
-		temp->num = i;//Ê¹ÓÃÎ²²å·¨½¨Á¢µ¥Á´±í 
+		temp->num = i;//ä½¿ç”¨å°¾æ’æ³•å»ºç«‹å•é“¾è¡¨ 
 		temp->code = m;
 		rear->next=temp;
 		rear=temp;
 	}
-	rear->next=head->next;//½¨Á¢µ¥Ñ­»·Á´±í 
-	free(head);//É¾³ıÍ·½áµã 
+	rear->next=head->next;//å»ºç«‹å•å¾ªç¯é“¾è¡¨ 
+	free(head);//åˆ é™¤å¤´ç»“ç‚¹ 
 	return rear;
 }
 
@@ -53,10 +53,10 @@ void GetNum(Joseph rear,int m,int n)
 	Joseph temp,node;
 	temp = rear;
 	int i; 
-	printf("³öÁĞµÄÈËµÄ±àºÅÊÇ£º");
+	printf("å‡ºåˆ—çš„äººçš„ç¼–å·æ˜¯ï¼š");
 	while(n--)
 	{
-		for(i=0;i<m-1;i++)//±éÀúÑ­»·µ¥Á´±í 
+		for(i=0;i<m-1;i++)//éå†å¾ªç¯å•é“¾è¡¨ 
 		{
 			temp = temp->next;
 		}
@@ -64,7 +64,7 @@ void GetNum(Joseph rear,int m,int n)
 		printf("%d ",node->num);
 		m = node->code; 
 		temp->next = node->next;
-		free(node);//É¾³ı½Úµã 
+		free(node);//åˆ é™¤èŠ‚ç‚¹ 
 	}
 }
 
